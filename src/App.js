@@ -20,9 +20,9 @@ function App() {
         <Routes>
           
           <Route path="/" element = {<Landing />} />
-          <Route path="cottages" element = {<ListType type="cottages" />} />
-          <Route path="homes" element = {<ListType type="homes" />} />
-          <Route path="unique" element = {<ListType type="unique" />} />
+          <Route path="cottages" element = {user ? <ListType type="cottages" /> : <Signin />} />
+          <Route path="homes" element = {user ? <ListType type="homes" /> : <Signin />} />
+          <Route path="unique" element = {user ? <ListType type="unique" /> : <Signin />} />
           <Route path="signin" element = {<Signin />} />
           <Route path="signup" element = {<Signup />} />
           <Route path="destination" element = {user ? <Destination /> : <Signin />} />

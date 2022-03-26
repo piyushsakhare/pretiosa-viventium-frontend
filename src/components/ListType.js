@@ -1,7 +1,6 @@
 import axios from "axios";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import List from "./List";
-import {AuthContext} from "./auth/AuthContext"
 
 
 function Cottages({type}) {
@@ -19,11 +18,9 @@ function Cottages({type}) {
         setLocation(searchInput)
     }
 
-    const {user} = useContext(AuthContext)
-
     useEffect(() => {
         try{
-            axios.get(`https://pretiosa-viventium-api.herokuapp.com/api/destinations/`, {
+            axios.get(`https://pretiosa-viventium-api.herokuapp.com/api/destinations`, {
                 headers : {
                     token : `Bearer `+ JSON.parse(localStorage.getItem("user")).accessToken 
                 }
