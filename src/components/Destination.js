@@ -50,6 +50,7 @@ function Destination() {
                 <div className='w-1/3 ml-12'>
                     <h1 className='text-4xl font-semibold mb-8' >{destination.destination.title}</h1>
                     <p>{destination.destination.description}</p>
+                    <p>{destination.destination.location}</p>
                     <h2 className='font-semibold my-2' >${destination.destination.price} / night  </h2>
                     <button className='p-2 bg-black text-white ' >Check Availability</button>
                 </div>

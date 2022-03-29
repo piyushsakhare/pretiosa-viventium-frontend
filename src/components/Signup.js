@@ -9,12 +9,12 @@ function Signup() {
     const [lastname,setLastname] = useState()
     const [email,setEmail] = useState()
     const [password,setPassword] = useState()
-    const navigate = useNavigate
-    const handleSubmit = async (e) => {
+    const navigate = useNavigate()
+    function handleSubmit (e) {
         e.preventDefault()
         if(password === confirmPassword){
             try{
-                await axios.post(`https://pretiosa-viventium-api.herokuapp.com/api/auth/signup`,{firstname, lastname, email, password})
+                axios.post(`https://pretiosa-viventium-api.herokuapp.com/api/auth/signup`,{firstname, lastname, email, password})
                 navigate("/signin")
             }
             catch (err){

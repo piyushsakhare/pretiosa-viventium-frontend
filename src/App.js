@@ -14,10 +14,21 @@ function App() {
 
   const {user} = useContext(AuthContext)
 
+  window.onbeforeunload = function (e) {
+    window.onunload = function () {
+            window.localStorage.isMySessionActive = "false";
+    }
+    return undefined;
+  };
+
+  window.onload = function () {
+            window.localStorage.isMySessionActive = "true";
+  };
+
   return (
     <div className="App">
       <Nav />
-      <div className="w-full px-28 pt-20">
+      <div className="w-full md:px-28 px-8 pt-20">
         <Routes>
           
           <Route path="/" element = {<Landing />} />
