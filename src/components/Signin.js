@@ -1,4 +1,5 @@
 import { useContext, useState } from "react"
+import { Link, useNavigate } from "react-router-dom"
 import { login } from "./auth/apiCalls"
 import { AuthContext } from "./auth/AuthContext"
 
@@ -7,10 +8,11 @@ function Signin() {
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
     const {isFetching, dispatch} = useContext(AuthContext)
-
+    const navigate = useNavigate()
     const handleLogin = (e) => {
         e.preventDefault()
         login({email, password}, dispatch)
+        navigate("/")
     }
 
     return(
@@ -22,6 +24,7 @@ function Signin() {
                     <label>Password : </label>
                     <input className="p-2 mb-8 border border-black" type='password' placeholder="Enter Password" onChange={(e) => setPassword(e.target.value)} ></input>
                     <button onClick={handleLogin} className="bg-black text-white font-medium p-2" disabled={isFetching}>SIGN IN</button>
+                    <p className="mt-4" >Not a member ? <Link className="font-medium" to="/signup" >SignUp</Link></p>
                 </form>
             </div>
         </div>

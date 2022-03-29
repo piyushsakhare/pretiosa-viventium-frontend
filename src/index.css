@@ -5,3 +5,12 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+
+.options {
+    display: none;
+}
+
+.profile:hover .options{
+    display: block;
+    position: absolute;
+}
