@@ -32,13 +32,13 @@ function App() {
         <Routes>
           
           <Route path="/" element = {<Landing />} />
+          <Route path="profile" element = {user ? <Profile /> : <Signin />} />
           <Route path="cottages" element = {user ? <ListType type="cottages" /> : <Signin />} />
           <Route path="homes" element = {user ? <ListType type="homes" /> : <Signin />} />
           <Route path="unique" element = {user ? <ListType type="unique" /> : <Signin />} />
           <Route path="signin" element = {user ? <ListType /> : <Signin />} />
           <Route path="signup" element = {user ? <ListType /> : <Signup />} />
           <Route path="destination" element = {user ? <Destination /> : <Signin />} />
-          <Route path="profile" element = {user ? <Profile /> : <Signin />} />
         </Routes>
       </div>
       <Footer />

@@ -13,4 +13,5 @@ body {
 .profile:hover .options{
     display: block;
     position: absolute;
+    display: inline-block;
 }

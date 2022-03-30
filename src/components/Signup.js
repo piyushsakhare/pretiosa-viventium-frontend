@@ -28,7 +28,7 @@ function Signup() {
     return(
         <div className='grid place-content-center my-24 ' >
             <div className="p-8 bg-gray-200">
-                <form className="flex-col flex w-96">
+                <form className="flex-col flex md:w-96 w-64">
                     <label>First Name : </label>
                     <input onChange={(e) => setFirstname(e.target.value)} className="p-2 mb-6 border border-black" type='text' placeholder="Enter First Name" ></input>
                     <label>Last Name : </label>

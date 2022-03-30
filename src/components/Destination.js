@@ -28,8 +28,8 @@ function Destination() {
     
     return (
         <div className='my-12'>
-            <div className='flex' >
-                <div className='w-2/3 flex' >
+            <div className='md:flex' >
+                <div className='md:w-2/3 flex' >
                     <img src={img} ></img>
                     <button onClick={handleImg} ><svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@ function Destination() {
                         </svg>
                     </button>
                 </div>
-                <div className='w-1/3 ml-12'>
+                <div className='md:w-1/3 md:ml-12 mt-8 md:mt-0'>
                     <h1 className='text-4xl font-semibold mb-8' >{destination.destination.title}</h1>
                     <p>{destination.destination.description}</p>
                     <p>{destination.destination.location}</p>

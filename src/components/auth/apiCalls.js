@@ -8,6 +8,7 @@ export const login = async (user, dispatch) => {
         dispatch(loginSuccess(res.data))
     }catch(err){
         dispatch(loginFail())
+        window.alert('Wrong Email or password')
     }
 }
 
