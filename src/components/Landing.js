@@ -10,8 +10,8 @@ function Landing() {
             <div className="md:flex">
                 <div className="md:w-2/3 mt-16">
                     <h1 className='sm:text-8xl text-6xl font-bold'>Stunning places to stay</h1>
-                    <p className='mt-16 lg:w-1/2'>Make your trip memorable and comfortable by choosing to stay in luxurious houses with Pretiosa Viventium</p>
-                    <Link to='/cottages' className='mt-16 p-2 bg-black text-white'>Select Destination</Link>
+                    <p className='my-16 lg:w-1/2'>Make your trip memorable and comfortable by choosing to stay in luxurious houses with Pretiosa Viventium</p>
+                    <Link to='/cottages' className='p-2 bg-black text-white'>Select Destination</Link>
                 </div>
                 <div className="w-1/3 lg:block hidden">
                     <img src={main} ></img>
