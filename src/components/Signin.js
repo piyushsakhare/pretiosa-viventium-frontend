@@ -26,7 +26,7 @@ function Signin() {
                     <input className="p-2 mb-8 border border-black" type='password' placeholder="Enter Password" onChange={(e) => setPassword(e.target.value)} ></input>
                     <button onClick={handleLogin} className="bg-black text-white font-medium p-2" disabled={isFetching}>SIGN IN</button>
                     <p className="mt-4" >Not a member ? <Link className="font-medium" to="/signup" >SignUp</Link></p>
-                        <p>Dummy id : prajwalthorat@gmail.com password: Prajwal123
+                        <p>Dummy id : prajwalthorat@gmail.com password: Prajwal123 </p>
                 </form>
             </div>
         </div>
